@@ -10,5 +10,5 @@ else{
     Write-Output "Chocolatey Version $testchoco is already installed"
 }
 
-iex $installVBox
-iex $installPodman
+Invoke-Expression $installVBox
+Invoke-Expression $installPodman
