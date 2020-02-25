@@ -4,9 +4,9 @@ jobs:
       vmImage: "windows-2019"
     steps:
       - script: |
-                    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-                    choco new choco-podman-machine-turnkey
-                    git clone https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git C:\choco-podman-machine-turnkey\Install
-                    cd C:\choco-podman-machine-turnkey\Install
-                    ./choco-podman
-                    podman-machine --version
+                    powershell Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+                    powershell choco new choco-podman-machine-turnkey
+                    powershell git clone https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git C:\choco-podman-machine-turnkey\Install
+                    powershell cd C:\choco-podman-machine-turnkey\Install
+                    powershell ./choco-podman
+                    powershell podman-machine --version
