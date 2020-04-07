@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
+
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+
+<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
+<!-- * If you are an organization making private packages, you probably have no issues here -->
+<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>podman-machine-turnkey</id>
+    <version>1.0</version>
+    <title>Podman-Machine-TurnKey (Install)</title>
+    <authors>Trey Burks, Paul Jones, Jacob Evans, Aaron Otto, Jonah White, Dustin Lee</authors>
+    <!-- projectUrl is required for the community feed -->
+    <!--projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl-->
+    <tags>podman-machine-turnkey</tags>
+    <summary>This is a turnkey installer for podman-machine.</summary>
+    <description>This is a turnkey installer for podman-machine. </description>
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--dependencies-->
+      <!--dependency id="VirtualBox" version="6.1.4" /-->
+      <!--dependency id="Chocolatey" version="0.10.15" /-->
+      <!--dependency id="podman-machine" version="0.17" /-->
+    <!--/dependencies-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
