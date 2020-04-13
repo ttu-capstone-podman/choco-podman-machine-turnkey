@@ -2,10 +2,10 @@
 Chocolatey package for a turn-key installation of podman-machine
 
 Installation Instructions:
-    To install the podman-machine turn-key, run `choco install "package_name"`
+    To install the podman-machine turn-key, run `choco install "package_name"` in command prompt or powershell
 
 Uninstall Instructions: 
-    To uninstall the podman-machine turn-key, run `choco uninstall "package_name"`
+    To uninstall the podman-machine turn-key, run `choco uninstall "package_name"` in command prompt or powershell
     
 Once Installed run these Commands:
     1. `podman-machine create box`
