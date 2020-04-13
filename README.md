@@ -5,7 +5,7 @@ Installation Instructions:
     To install the podman-machine turn-key, run `choco install "package_name"`
 
 Uninstall Instructions: 
-    To uninstall the podman-machine turn-key, run `choco uninstall "package_name"
+    To uninstall the podman-machine turn-key, run `choco uninstall "package_name"`
     
 Once Installed run these Commands:
     1. `podman-machine create box`
