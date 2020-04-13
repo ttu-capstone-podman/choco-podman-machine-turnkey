@@ -6,18 +6,18 @@ $PName = 'podman-machine'
 $checksum = 'A5424DEDED50004F0F7AC488B5415C782770B7DA58F609C50DF22739F956BEA3'
 $checksumType   = 'sha256'
 
-$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE' #only one of these: exe, msi, msu
-  url           = $url#'https://github.com/boot2podman/machine/releases/download/v0.17/podman-machine.windows-amd64.exe'
+#$packageArgs = @{
+  #packageName   = $env:ChocolateyPackageName
+  #unzipLocation = $toolsDir
+  #fileType      = 'EXE' #only one of these: exe, msi, msu
+  #url           = $url#'https://github.com/boot2podman/machine/releases/download/v0.17/podman-machine.windows-amd64.exe'
   
-  softwareName  = 'Podman-Machine-turnkey*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-  checksum       = $checksum
-  checksumType   = $checksumType
+  #softwareName  = 'Podman-Machine-turnkey*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
+  #checksum       = $checksum
+  #checksumType   = $checksumType
   #silentArgs    = "/S"#"/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
   #validExitCodes= @(0) #please insert other valid exit codes here
-}
+#}
 
 Get-ChocolateyWebFile `
   -PackageName $PName `
@@ -28,7 +28,7 @@ Get-ChocolateyWebFile `
 
 Invoke-Expression $installVBox
 
-Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
+#Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
 
 
 Write-Host " "

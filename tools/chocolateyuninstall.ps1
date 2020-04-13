@@ -9,6 +9,7 @@
 
 ## If this is an MSI, ensure 'softwareName' is appropriate, then clean up comments and you are done.
 ## If this is an exe, change fileType, silentArgs, and validExitCodes
+$uninstallVBox = "choco uninstall virtualbox -n -y"
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageArgs = @{
@@ -33,6 +34,8 @@ $packageArgs = @{
                                  #       https://chocolatey.org/packages/autohotkey.portable
   #validExitCodes= @(0) #please insert other valid exit codes here
 }
+
+Invoke-Expression $uninstallVBox
 
 $uninstalled = $false
 # Get-UninstallRegistryKey is new to 0.9.10, if supporting 0.9.9.x and below,
