@@ -1,5 +1,6 @@
 # choco-podman-machine-turnkey
 Chocolatey package for a turn-key installation of podman-machine
+Note: this package will automatically install VirtualBox to run the podman-machine VM
 
 Installation Instructions:
     To install the podman-machine turn-key, run `choco install "package_name"` in command prompt or powershell
