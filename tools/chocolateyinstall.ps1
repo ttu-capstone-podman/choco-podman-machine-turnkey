@@ -31,16 +31,16 @@ Invoke-Expression $installVBox
 #Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
 
 
-Write-Host " "
-Write-Host "-------------------------------------------------------------------------------------------------------------------------------------" -ForegroundColor white -BackgroundColor black
-Write-Host "TO GET STARTED WITH PODMAN-MACHINE, RUN THE FOLLOWING COMMANDS:" -ForegroundColor white -BackgroundColor black
-Write-Host " " -ForegroundColor white -BackgroundColor black
-Write-Host "$ podman-machine create box" -ForegroundColor white -BackgroundColor black
-Write-Host "$ podman-machine ssh box" -ForegroundColor white -BackgroundColor black
-Write-Host "tc@box:~$ sudo podman" -ForegroundColor white -BackgroundColor black
-Write-Host " " -ForegroundColor white -BackgroundColor black
-Write-Host "This will create a podman server, automatically connect to it via ssh, and install the latest boot2podman ISO. Once the latest ISO is installed, you can use the regular podman commands, found here: https://github.com/containers/libpod/blob/master/commands.md" -ForegroundColor white -BackgroundColor black
-Write-Host " " -ForegroundColor white -BackgroundColor black
-Write-Host "It's important to note that only files on the VM will be visible to the containers. More information about accessing files, ports, and installing tools can be found here: https://github.com/boot2podman/machine/blob/master/README.md" -ForegroundColor white -BackgroundColor black
-Write-Host "-------------------------------------------------------------------------------------------------------------------------------------" -ForegroundColor white -BackgroundColor black
-Write-Host " "
+Write-Output " "
+Write-Output "-------------------------------------------------------------------------------------------------------------------------------------"
+Write-Output "TO GET STARTED WITH PODMAN-MACHINE, RUN THE FOLLOWING COMMANDS:"
+Write-Output " "
+Write-Output "$ podman-machine create box"
+Write-Output "$ podman-machine ssh box" 
+Write-Output "tc@box:~$ sudo podman"
+Write-Output " " 
+Write-Output "This will create a podman server, automatically connect to it via ssh, and install the latest boot2podman ISO. Once the latest ISO is installed, you can use the regular podman commands, found here: https://github.com/containers/libpod/blob/master/commands.md"
+Write-Output " "
+Write-Output "It's important to note that only files on the VM will be visible to the containers. More information about accessing files, ports, and installing tools can be found here: https://github.com/boot2podman/machine/blob/master/README.md"
+Write-Output "-------------------------------------------------------------------------------------------------------------------------------------"
+Write-Output " "
