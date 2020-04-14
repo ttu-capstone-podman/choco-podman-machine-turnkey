@@ -8,4 +8,4 @@ jobs:
                     powershell git clone --single-branch --branch package-test https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git
                     powershell choco install podman-machine-turnkey --source="'D:\a\1\s\choco-Podman-Machine-TurnKey'" -y
                     powershell podman-machine --version
-                    powershell VirtualBoxVM --help
+                    powershell choco list -local-only
