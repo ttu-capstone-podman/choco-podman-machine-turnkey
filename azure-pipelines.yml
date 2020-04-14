@@ -4,6 +4,7 @@ jobs:
       vmImage: "windows-2019"
     steps:
       - script: |
+                    powershell pwd
                     powershell CD C:\
                     powershell git clone --single-branch --branch package-test https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git
                     powershell choco install podman-machine-turnkey --source="'C:\choco-Podman-Machine-TurnKey'" -y
