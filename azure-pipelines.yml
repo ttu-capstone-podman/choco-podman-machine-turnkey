@@ -5,8 +5,7 @@ jobs:
     steps:
       - script: |
                     powershell pwd
-                    powershell CD C:\
                     powershell git clone --single-branch --branch package-test https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git
-                    powershell choco install podman-machine-turnkey --source="'C:\choco-Podman-Machine-TurnKey'" -y
+                    powershell choco install podman-machine-turnkey --source="'D:\a\1\s\choco-Podman-Machine-TurnKey'" -y
                     powershell podman-machine --version
                     powershell VirtualBox --version
