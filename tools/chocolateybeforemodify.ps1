@@ -6,7 +6,7 @@
 #  uninstall script so that it doesn't fail when it is already uninstalled.
 # NOTE: For upgrades - like the uninstall script, this script always runs from 
 #  the currently installed version, not from the new upgraded package version.
-Write-host "Please close all Podman-Machine and Virtual box processes on local host before continuing."
+Write-Output "Please close all Podman-Machine and Virtual box processes on local host before continuing."
 read-host “Press ENTER to continue...”
 
 $ProcessActive = Get-Process VirtualBox -ErrorAction SilentlyContinue
@@ -18,7 +18,7 @@ if($ProcessActive -eq $null) {
 #If process is running
 else {
  Stop-Process -Name "VirtualBox" -Force
- Write-Host "Force closed VirtualBox"
+ Write-Output "Force closed VirtualBox"
 }
 
 $ProcessActive = Get-Process podman-machine -ErrorAction SilentlyContinue
@@ -30,5 +30,5 @@ if($ProcessActive -eq $null) {
 #If process is running
 else {
  Stop-Process -Name "podman-machine" -Force
- Write-Host "Force closed podman-machine"
+ Write-Output "Force closed podman-machine"
 }
