@@ -3,11 +3,11 @@
 Chocolatey package for a turn-key installation of podman-machine.  
 Note: this package will automatically install VirtualBox to run the podman-machine VM
 
-Installation Instructions:
-    To install the podman-machine turn-key, run `choco install "package_name"` in command prompt or powershell
+Installation Instructions:  
+    To install the podman-machine turn-key, open powershell or command prompt and navigate to the directory where you want the repository files to be downloaded. Then clone the repository using `git clone https://github.com/ttu-capstone-podman/choco-podman-machine-turnkey.git`. Once the repository has been cloned, install the package by running `choco install podman-machine-turnkey --source="'path\to\directory\choco-podman-machine-turnkey'" -y`
 
-Uninstall Instructions: 
-    To uninstall the podman-machine turn-key, run `choco uninstall "package_name"` in command prompt or powershell
+Uninstall Instructions:  
+    To uninstall the podman-machine turn-key, run `choco uninstall podman-machine-turnkey` in command prompt or powershell, then delete the local repository from the file system.
     
 Once Installed run these Commands:
     1. `podman-machine create box`
